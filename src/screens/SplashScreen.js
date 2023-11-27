@@ -1,6 +1,6 @@
 import * as React from "react";
-import {StyleSheet, View, Text, Image, TouchableOpacity, Button} from "react-native";
-import {FontFamily, FontSize, Color} from "../../assets/styles/Styles";
+import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
+import {FontFamily, Color} from "../../assets/styles/Styles";
 import AppLogo from "../../assets/images/appLogo";
 
 function SplashScreen({ navigation }) {
@@ -16,7 +16,7 @@ function SplashScreen({ navigation }) {
             </TouchableOpacity>
         </View>
     );
-};
+}
 
 const styles = StyleSheet.create({
     bg: {
