@@ -1,16 +1,15 @@
 import * as React from "react";
 import {StyleSheet, View, Text, Image, TextInput, TouchableOpacity} from "react-native";
-import {FontFamily, FontSize, Color} from "../../assets/styles/Styles";
+import {Fonts, FontSize, Colors} from "../theme/index";
+import Arrow from "../../assets/image/arrow";
+
 
 function SignUpScreen({navigation}) {
     return (
         <View style={styles.signUpPage}>
             <View>
                 <Text style={styles.signUpText}>Sign Up</Text>
-                <Image
-                    style={styles.backIcon}
-                    source={require("../../assets/image/icon1.png")}
-                />
+                <Arrow style={styles.backIcon}/>
             </View>
             <View>
                 <Text style={styles.inputName}>Name</Text>
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
     signUpPage: {
         flex: 1,
         height: 812,
-        backgroundColor: Color.white,
+        backgroundColor: Colors.white,
     },
     signUpText: {
         width: 106,
@@ -52,9 +51,9 @@ const styles = StyleSheet.create({
         top: 60,
         left: 70,
         fontSize: 26,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontWeight: 600,
-        color: Color.colorDarkslategray,
+        color: Colors.colorDarkslategray,
         textAlign: "left",
         position: "absolute",
     },
@@ -69,7 +68,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 146,
         left: 36,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontSize: 14,
         fontWeight: 500,
         alignItems: "flex-start",
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 252,
         left: 36,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontSize: 14,
         fontWeight: 500,
         alignItems: "flex-start",
@@ -117,7 +116,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 354,
         left: 36,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontSize: 14,
         fontWeight: 500,
         alignItems: "flex-start",
@@ -153,9 +152,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         paddingTop: 20,
         paddingBottom: 20,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontWeight: "700",
-        color: Color.colorWhite,
+        color: Colors.colorWhite,
     },
     rectangleViewLeft: {
         backgroundColor: "#d5dde0",

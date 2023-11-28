@@ -1,12 +1,13 @@
 import * as React from "react";
-import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
-import {FontFamily, Color} from "../../assets/styles/Styles";
-import AppLogo from "../../assets/images/appLogo";
+import {StyleSheet, View, Text, TouchableOpacity, Button} from "react-native";
+import {Fonts, Colors} from "../theme/index";
+import AppLogo from "../../assets/image/appLogo";
 
 function SplashScreen({ navigation }) {
     return (
         <View style={styles.bg}>
             <AppLogo/>
+            <Button title={"Sign Up"} variant={"outline"} color={"black"} onPress={() => navigation.navigate('SignUpScreen')} />
             <TouchableOpacity   onPress={() => navigation.navigate('SignUpScreen')} style={styles.btnSignUp}>
                 <Text style={styles.btnSignUpText}>Sign Up</Text>
             </TouchableOpacity>
@@ -44,9 +45,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         paddingTop: 20,
         paddingBottom: 20,
-        fontFamily: FontFamily.montserratBold,
+        fontFamily: Fonts.montserratBold,
         fontWeight: "700",
-        color: Color.colorMediumslateblue,
+        color: Colors.colorMediumslateblue,
 
     },
     btnSignIn: {
@@ -56,8 +57,8 @@ const styles = StyleSheet.create({
 
     },
     signInText:{
-        color: Color.colorWhite,
-        fontFamily: FontFamily.montserratBold,
+        color: Colors.colorWhite,
+        fontFamily: Fonts.montserratBold,
         fontWeight: "700",
     }
 });
